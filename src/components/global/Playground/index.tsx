@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import PlaygroundCode from '../PlaygroundCode';
 
 import './playground.css';
 
@@ -7,7 +8,7 @@ enum Mode {
   MD = 'md',
 }
 
-export default function Playground({ children }) {
+export default function Playground({ code }) {
   const codeRef = useRef(null);
 
   const [mode, setMode] = useState(Mode.iOS);
@@ -104,7 +105,7 @@ export default function Playground({ children }) {
         className={'playground__code-block ' + (codeExpanded ? 'playground__code-block--expanded' : '')}
         aria-expanded={codeExpanded ? 'true' : 'false'}
       >
-        {children.find((child) => { return activeFramework === child.props.name; })}
+        <PlaygroundCode>{code[activeFramework]}</PlaygroundCode>
       </div>
     </div>
   );
