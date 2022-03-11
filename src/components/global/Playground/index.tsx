@@ -8,7 +8,6 @@ enum Mode {
 }
 
 export default function Playground({ children }) {
-  console.log(children)
   const codeRef = useRef(null);
 
   const [mode, setMode] = useState(Mode.iOS);
@@ -18,7 +17,8 @@ export default function Playground({ children }) {
   const isIOS = mode === Mode.iOS;
   const isMD = mode === Mode.MD;
 
-  const activeFramework = 'react';
+  // TODO: Change this to connect with buttons/toggles
+  const activeFramework = 'vue';
 
   function copySourceCode() {
     const copyButton = codeRef.current.querySelector('button');

@@ -1,5 +1,5 @@
-import Playground from '../../../../src/components/global/Playground';
-import PlaygroundCode from '../../../../src/components/global/PlaygroundCode';
+import Playground from '@site/src/components/global/Playground';
+import PlaygroundCode from '@site/src/components/global/PlaygroundCode';
 import JavaScriptCode from './javascript.md'
 import ReactCode from './react.md'
 import VueCode from './vue.md'
