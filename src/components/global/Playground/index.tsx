@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import PlaygroundCode from '../PlaygroundCode';
 
 import './playground.css';
 
@@ -105,7 +104,7 @@ export default function Playground({ code }) {
         className={'playground__code-block ' + (codeExpanded ? 'playground__code-block--expanded' : '')}
         aria-expanded={codeExpanded ? 'true' : 'false'}
       >
-        <PlaygroundCode>{code[activeFramework]}</PlaygroundCode>
+        {code[activeFramework]}
       </div>
     </div>
   );
